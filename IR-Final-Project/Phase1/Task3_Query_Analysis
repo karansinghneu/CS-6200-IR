@@ -1,0 +1,34 @@
+Retrieval Models, the following are the queries:
+->Stemmed queries/ Normal Queries:
+1.parallel algorithm / parallel algorithms
+2.appli stochast process / applied stochastic processes
+3. distribut comput structur and algorithm / distributed computing structures and algorithms
+
+For BM25 Retrieval Model( Stemmed vs Non-Stemmed Version):
+Query 1:
+This query has 16 common in the top 20 Documents for the above models.
+The high similarity is because we can see that one of the terms i.e parallel is same for both the versions of the
+query.
+Query 2:
+This query has 9 common in the top 20 Documents for the above models. The less similarity is because we can see
+that all these words have been stemmed to their root stem word,  applied-->appli, stochastic -->stochast and
+ processes-->process in the stemmed version of the query.
+Query 3:
+This query has 4 documents in common in the top 20 documents for the above models. The least similarity is because
+the query is long and all the terms except “and” have been stemmed to their root stem word in the stemmed version
+of the query.
+It can be concluded that in all the three queries, stemming has the most amount of impact on this query as it is
+long and all the terms are also stemmed which causes most of the documents in the top 20 ranked documents to be
+different.
+For QLM Retrieval Modell( Stemmed vs Non-Stemmed Version):
+Query 1:
+This query has 17 documents in common in the top 20 documents for the above models. The high similarity is because
+the query is short and has 1 term in common in both the versions of the query.
+Query 2:
+This query has 12 documents in common in the top 20 documents for the above models. We can say that this models
+reacts better to stemming as compared to the BM25 Model.
+Query 3:
+This query has 8 documents in common in the top 20 documents for the above models. The less similarity is because
+the query is long and all terms have been stemmed to their root stem word in the stemmed version of the query.
+We can also say that this model reacts better to stemming as compared to the BM25 Model.
+We will now be doing analysis between 2 Retrieval Models for the following non stemmed queries:

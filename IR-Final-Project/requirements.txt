@@ -1,0 +1,12 @@
+beautifulsoup4==4.7.1
+certifi==2019.3.9
+chardet==3.0.4
+idna==2.8
+nltk==3.4
+prettytable==0.7.2
+requests==2.21.0
+singledispatch==3.4.0.3
+six==1.12.0
+soupsieve==1.9.1
+thesaurus==0.2.3
+urllib3==1.24.2
