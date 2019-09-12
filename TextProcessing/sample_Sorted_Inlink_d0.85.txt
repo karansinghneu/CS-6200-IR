@@ -1,0 +1,8 @@
+*******************InlinkStats*******************
+The pages sorted in descending order of the Inlink count are :
+('E', 4)
+('A', 3)
+('C', 3)
+('F', 3)
+('B', 2)
+('D', 2)

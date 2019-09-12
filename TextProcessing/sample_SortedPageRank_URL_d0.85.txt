@@ -1,0 +1,8 @@
+******************PageRank******************
+The pages as per their URL and scores are : 
+('https://en.wikipedia.org/wiki/A', 0.25212438645639995)
+('https://en.wikipedia.org/wiki/E', 0.18702868487113627)
+('https://en.wikipedia.org/wiki/F', 0.15131604500484064)
+('https://en.wikipedia.org/wiki/C', 0.15131604500484064)
+('https://en.wikipedia.org/wiki/B', 0.1393191601625802)
+('https://en.wikipedia.org/wiki/D', 0.11889567850020252)

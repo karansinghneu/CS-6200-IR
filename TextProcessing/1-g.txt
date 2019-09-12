@@ -1,0 +1,9 @@
+1. image.png
+The graph has a plot of Frequency vs Rank i.e the Frequency on the Y-Axis and the rank on the X-Axis.
+The rank of the trigrams is such that the trigram with the highest frequency has a rank of 1 and so on 
+
+Analysis of the graph:
+As we can see from the graph that for the low ranks and the high ranks the graph is a little skewed and inaccurate and thus we can say that the trigram frequency obeys Zipf's Law.
+
+The constant corresponding to Probability of Occurrence * Rank order is approximately: 10^-5 * 10^3 = 0.01
+

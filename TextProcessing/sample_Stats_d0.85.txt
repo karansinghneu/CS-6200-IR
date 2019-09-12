@@ -1,0 +1,5 @@
+*******************GraphStatistics*******************
+The total number of pages in the graph with no out-links (sinks) are : 0
+The total number of pages in the graph with no in-links (sources) are : 0
+The maximum in-degree in the graph is : 4
+The maximum out-degree in the graph is : 4

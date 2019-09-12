@@ -1,0 +1,75 @@
+Task 4 Findings:
+4.1 
+For G1
+-->When lambda is 0.25, the scores are distinct and can be seen in decreasing order from unites states(0.008526 approx) to earth(0.007548 approx) and so on for further URL's. As compared to the baseline of 0.15 The page rank values are less for 0.25 i.e ('https://en.wikipedia.org/wiki/United_States', 0.009635683227062219) for 0.15 and 
+('https://en.wikipedia.org/wiki/United_States', 0.008526556670959059) for 0.25
+For G2
+When lambda is 0.25, the scores are distinct and can be seen in decreasing order from Mars(0.01396 approx) to Submarine(0.01032 approx) and so on for further URL's. As compared to the baseline of 0.15 The page rank values difference is very less for 0.25 and 0.15 i.e ('https://en.wikipedia.org/wiki/Mars', 0.013358390810221613) for 0.15 and 
+('https://en.wikipedia.org/wiki/Mars', 0.013961191897675806) for 0.25
+
+FOR G1
+-->When lambda is 0.35, the scores are less distinct than before and can be seen in decreasing order from unites states(0.00749 approx) to earth(0.00668 approx) and so on for further URL's. As compared to the baseline of 0.15 The page rank values are less for 0.35 i.e ('https://en.wikipedia.org/wiki/United_States', 0.009635683227062219) for 0.15 and 
+('https://en.wikipedia.org/wiki/United_States', 0.007490432587060639) for 0.35
+
+FOR G2
+When lambda is 0.35, the scores are more distinct and can be seen in decreasing order from Mars(0.01388 approx) to Submarine(0.00948 approx) and so on for further URL's. As compared to the baseline of 0.15 The page rank values difference is very less for 0.35 and 0.15 i.e ('https://en.wikipedia.org/wiki/Mars', 0.013358390810221613) for 0.15 and 
+('https://en.wikipedia.org/wiki/Mars', 0.013886775364312137) for 0.35
+
+FOR G1
+-->When lambda is 0.5, the scores are very close for different URL's and can be seen in decreasing order from unites states(0.00599 approx) to earth(0.00538 approx) and so on for further URL's. As compared to the baseline of 0.15 The page rank values are less for 0.5 i.e ('https://en.wikipedia.org/wiki/United_States', 0.009635683227062219) for 0.15 and 
+('https://en.wikipedia.org/wiki/United_States', 0.0059952979901580165) for 0.5
+
+FOR G2
+When lambda is 0.5, the scores are more distinct and can be seen in decreasing order from Mars(0.0127 approx) to Submarine(0.00800 approx) and so on for further URL's. As compared to the baseline of 0.15 The page rank values difference is very less for 0.5 and 0.15 i.e ('https://en.wikipedia.org/wiki/Mars', 0.013358390810221613) for 0.15 and 
+('https://en.wikipedia.org/wiki/Mars', 0.012703489887552702) for 0.5
+
+
+We can observe that as the lamda increases the value of the page rank value is moving away from the baseline of 0.15 for both G1 and G2
+
+4.2 
+Compared to the baseline on running only 4 iterations the top 10 ranks are the same and after that there are some differences. The 4th l2 norm value is not less than 0.0005 so this is not an accurate page rank estimation as the values are not converging.
+
+4.3
+FOR G1
+
+The top 25 in link counts are different to the baseline, here the top 3 are in the different order as compared to the baseline of 3.d. Top 3 for in Link counts are :
+Sorted by In Links
+('NASA', 301)
+('Earth', 291)
+('Moon', 246)
+
+Top 3 for Baseline are :
+Sorted by pageRank
+('https://en.wikipedia.org/wiki/United_States', 0.009635683227062219)
+('https://en.wikipedia.org/wiki/Earth', 0.008410341050770093)
+('https://en.wikipedia.org/wiki/NASA', 0.006490166101365378) We can see some links which have the same rank in both the ranking systems.
+
+
+FOR G2
+The top 25 in link counts are different to the baseline, here the top 3 are in the different order as compared to the baseline of 3.d. Top 3 for in Link counts are :
+Sorted by In Links
+('Mars', 464)
+('Colonization_of_Mars', 307)
+('Exploration_of_Mars', 305)
+
+Top 3 for Baseline are :
+Sorted by pageRank
+('https://en.wikipedia.org/wiki/Mars', 0.013358390810221613)
+('https://en.wikipedia.org/wiki/Submarine', 0.01097845075601528)
+('https://en.wikipedia.org/wiki/Maryland', 0.006446281222749134)
+
+We can see some links which have the same rank in both the ranking systems.
+Pros of using in link count sorting:
+
+1.The calculation of in-links counts to a particular Document is easier/faster to that of the Page Rank.
+2.Every count in-link to page is considered a vote of support. The page is likely to be visited first than the pages
+without many in-links. Links relevant to the seed URL are visited as top choices.
+
+Cons:
+
+1.A page can be considered important even if there are spam links pointing to the page, without any relevant content.
+2.If the Document has more in-links, the algorithm considers it important but there could be other pages that are more
+important (According to PageRank calculation).
+3) Page Rank takes into consideration both the damping_factor and the in_links thereby increasing the importance
+of the page .
+
