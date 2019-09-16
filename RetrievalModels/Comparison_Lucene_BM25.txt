@@ -1,0 +1,127 @@
+BM25 takes into consideration the document length and the average document length of the documents as well as the relevance of the documents in terms of the query words.
+
+Lucene considers relevance to be directly related to the occurrence of query terms in the documents.
+
+BM25 ranking algorithm is implemented without any relevance document information,
+while lucene uses boolean model to find matching documents.
+
+Lucene's ranking based on the number of hits a document gets, hence these documents have higher rank.
+
+By observing the results we can see that Lucene is more focused on the occurrence of the query terms
+in the documents while BM25 is based on relevance of the documents related to the query terms
+
+
+The comparison between the top 5 results of the two search engines for each query are as follows:
+
+Query 1: milky way galaxy
+
+The top 5 Results for Lucene are:
+
+1 Milky_Way(doc_id = 81) 1 0.67078054 Lucene
+1 Andromeda_Galaxy(doc_id = 278) 2 0.6263712 Lucene
+1 Galaxy(doc_id = 449) 3 0.587704 Lucene
+1 Elliptical_galaxy(doc_id = 248) 4 0.4927293 Lucene
+1 Galaxy_filament(doc_id = 203) 5 0.45767555 Lucene
+
+The top 5 Results for BM25 are:
+
+1 Q0 Andromeda_Galaxy 1 4.6796647495440045 UniBM25
+1 Q0 Galaxy 2 4.65826754159128 UniBM25
+1 Q0 Elliptical_galaxy 3 4.640914429332304 UniBM25
+1 Q0 Galaxy_filament 4 4.571672602154775 UniBM25
+1 Q0 Dark_matter 5 4.521253648056333 UniBM25
+
+We can see that there are 4 documents which are common for both the search engines in the top 5 documents namely:
+Andromeda_Galaxy, Galaxy, Elliptical_galaxy and Galaxy_filament
+The BM25 Search Engine has 1 more document which is "Dark_matter" and is ranked 5th whereas the Lucene Search Engine does not have this document ranked in the top 5.
+
+We can clearly figure out that Lucene ranks the top 5 documents by only taking the query terms into consideration because each and every document ranked by Lucene has atleast one query term in the doc id whereas when it comes to BM25, it also has a document called Dark_matter at the 5th position which is definitely relevant to the query terms but the doc_id doesn't contain any of the query terms and still it is ranked at the 5th position.
+
+Query 2: hubble space telescope
+
+The top 5 Results for Lucene are:
+
+2 Space_telescope(doc_id = 706) 1 0.49746034 Lucene
+2 Space_observatory(doc_id = 958) 2 0.49746034 Lucene
+2 Hubble_Space_Telescope(doc_id = 15) 3 0.48815373 Lucene
+2 Hubble_constant(doc_id = 176) 4 0.39416718 Lucene
+2 Hubble's_law(doc_id = 770) 5 0.39416718 Lucene
+
+The top 5 Results for BM25 are:
+
+2 Q0 Henrietta_Leavitt 1 4.414141367765854 UniBM25
+2 Q0 Astrophysical_jet 2 4.255929097108543 UniBM25
+2 Q0 Galaxy_filament 3 3.4401717177613262 UniBM25
+2 Q0 Telescope 4 3.052309032625661 UniBM25
+2 Q0 Hubble_Space_Telescope 5 3.0381127422999823 UniBM25
+
+We can see that there is only 1 common document for both the search engines that is:
+Hubble_Space_Telescope
+The BM25 Search Engine has 4 more documents which are :
+Henrietta_Leavitt, Astrophysical_jet,Hubble_constant and Hubble's_law in the top 5.
+
+We can clearly see that Lucene is more focussed towards the query terms because every ranked document in the top 5 has atleast 1 query term whereas BM25 is focussed towards Relevance of the documents as well and thus has more relevant documents as well along with the documents with query terms.
+
+Query 3: international space station
+
+The top 5 Results for Lucene are:
+
+3 Orbital_Technologies_Commercial_Space_Station(doc_id = 568) 1 0.5676505 Lucene
+3 Salyut(doc_id = 804) 2 0.404798 Lucene
+3 Space_station(doc_id = 915) 3 0.36967975 Lucene
+3 Bigelow_Commercial_Space_Station(doc_id = 181) 4 0.36848366 Lucene
+3 Human_outpost(doc_id = 837) 5 0.33508015 Lucene
+
+The top 5 Results for BM25 are:
+
+3 Q0 Salyut 1 2.002260609564383 UniBM25
+3 Q0 Space_station 2 1.9975984360010193 UniBM25
+3 Q0 Bigelow_Commercial_Space_Station 3 1.9910367489245129 UniBM25
+3 Q0 Mir 4 1.990297056284821 UniBM25
+3 Q0 International_Space_Station 5 1.9894863615737064 UniBM25
+
+We can see that there are 3 documents in common namely:
+Salyut, Space_station and Bigelow_Commercial_Space_Station
+The BM25 Search Engine has 2 more documents which are:
+Mir and International_Space_Station
+
+Query 4: big bang theory
+
+The top 5 Results for Lucene are:
+
+4 Big_Bang_cosmology(doc_id = 366) 1 0.528369 Lucene
+4 Big_Bang(doc_id = 431) 2 0.528369 Lucene
+4 Cosmology(doc_id = 774) 3 0.35103402 Lucene
+4 Recombination_(cosmology)(doc_id = 573) 4 0.33965474 Lucene
+4 Ralph_Alpher(doc_id = 332) 5 0.30372792 Lucene
+
+The top 5 Results for BM25 are:
+
+4 Q0 Cosmic_background_radiation 1 4.872479147896157 UniBM25
+4 Q0 Astronomical_radio_source 2 4.805036034817506 UniBM25
+4 Q0 Han_dynasty 3 3.8216260509047477 UniBM25
+4 Q0 Hayabusa_(spacecraft) 4 3.378682153201124 UniBM25
+4 Q0 List_of_interstellar_and_circumstellar_molecules 5 3.3233100333845957 UniBM25
+
+We can see that here there are no documents common between the top 5 ranked documents of Lucene and BM25 Search Engines.
+
+Query 5: mars exploratory missions
+
+The top 5 Results for Lucene are:
+
+5 Mars_probe_program(doc_id = 539) 1 0.24045767 Lucene
+5 Exploration_of_Mars(doc_id = 465) 2 0.2306157 Lucene
+5 Mars_Curse(doc_id = 967) 3 0.2306157 Lucene
+5 Mars_to_Stay(doc_id = 557) 4 0.21619385 Lucene
+5 List_of_missions_to_Mars(doc_id = 311) 5 0.2020285 Lucene
+
+The top 5 Results for BM25 are:
+
+5 Q0 AntÃ³nio_de_Abreu 1 5.969475407374739 UniBM25
+5 Q0 Diogo_Fernandes_Pereira 2 5.150248950116808 UniBM25
+5 Q0 Invention 3 4.623096186621157 UniBM25
+5 Q0 Moluccas 4 4.611923345263318 UniBM25
+5 Q0 James_Cook 5 4.351896085706036 UniBM25
+
+We can see that there are no common documents between the top 5 ranked documents of Lucene and BM25 Search Engines. 
+We can also clearly see that Lucene is more focussed towards the query terms as every doc_id of the top 5 ranked documents contains the first term of the query Mars whereas when we see the BM25 it is not the case thus we can say that BM25 takes the relevance also into consideration and not only the query terms.

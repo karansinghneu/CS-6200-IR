@@ -1,0 +1,16 @@
+BM25 implementation:
+
+1. The corpus is processed to create inverted index for unigram and store in a dictionary.
+
+2. The queries are read from query_file and for each query the bm25 scores for the document is calculated. In the same call the document length and the average document length is also determined using the dictionaries.
+
+3. Calculate term frequencies for each word in the given query and store it in a dictionary.
+
+4. The query is split into terms and these terms are matched with the terms from inverted index, to create a new reduced inverted index which contains only these terms.
+
+5. The score for each document is calculated using BM25 formula and updated with already existing score of the document if it already exists in the BM25 scores dictionary.
+
+6. For each query, the documents are ranked in descending order of their scores and the top 100 are written in a separate file for each query.
+
+Note:
+I have provided small comments beside some lines of the code for clear understanding.
