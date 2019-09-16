@@ -1,0 +1,80 @@
+The list of expansion terms identified for each of 5 queries along with the values used for k and n:
+
+Query 1: Robotic space missions
+k=10 and n=8
+[spacecraft, moon, exploration, propulsion, lunar, system, earth, orbit]
+k=10 and n=7
+[spacecraft, moon, exploration, propulsion, lunar, system, earth]
+k=10 and n=6
+[spacecraft, moon, exploration, propulsion, lunar, system]
+
+k=5 and n=8
+[lunar, propulsion, exploration, change, moon, system, technologies, earth]
+k=5 and n=7
+[lunar, propulsion, exploration, change, moon, system, technologies]
+k=5 and n=6
+[lunar, propulsion, exploration, change, moon, system]
+
+Query 2: Mars exploration
+k=10 and n=8
+[orbiter, lunar, lander, mission, flyby, surface, spacecraft, martian]
+k=10 and n=7
+[orbiter, lunar, lander, mission, flyby, surface, spacecraft]
+k=10 and n=6
+[orbiter, lunar, lander, mission, flyby, surface]
+
+k=5 and n=8
+[mission, lander, surface, orbiter, spacecraft, first, martian, earth]
+k=5 and n=7
+[mission, lander, surface, orbiter, spacecraft, first, martian]
+k=5 and n=6
+[mission, lander, surface, orbiter, spacecraft, first]
+
+Query 3: unmanned spacecraft
+k=10 and n=8
+[moon, lunar, landing, space, orbit, soyuz, manned, soviet]
+k=10 and n=7
+[moon, lunar, landing, space, orbit, soyuz, manned]
+k=10 and n=6
+[moon, lunar, landing, space, orbit, soyuz]
+
+k=5 and n=8
+[moon, lunar, landing, soyuz, surface, manned, first, soviet]
+k=5 and n=7
+[moon, lunar, landing, soyuz, surface, manned, first]
+k=5 and n=6
+[moon, lunar, landing, soyuz, surface, manned]
+
+Query 4: Planetary moons
+k=10 and n=8
+[jupiter, system, earth, planet, orbit, solar, satellites, saturn]
+k=10 and n=7
+[jupiter, system, earth, planet, orbit, solar, satellites]
+k=10 and n=6
+[jupiter, system, earth, planet, orbit, solar]
+
+k=5 and n=8
+[jupiter, lunar, earth, planets, solar, system, orbit, sun]
+k=5 and n=7
+[jupiter, lunar, earth, planets, solar, system, orbit]
+k=5 and n=6
+[jupiter, lunar, earth, planets, solar, system]
+
+Query 5: Satellites in Space
+k=10 and n=8
+[orbit, earth, launch, china, communications, moons, system, program]
+k=10 and n=7
+[orbit, earth, launch, china, communications, moons, system]
+k=10 and n=6
+[orbit, earth, launch, china, communications, moons]
+
+k=5 and n=8
+[first, china, orbit, launch, program, earth, states, communications]
+k=5 and n=7
+[first, china, orbit, launch, program, earth, states]
+k=5 and n=6
+[first, china, orbit, launch, program, earth]
+
+
+
+

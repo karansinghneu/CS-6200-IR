@@ -1,0 +1,159 @@
+Comparing the results obtained from Task 1b and Task 2b for the first 2 queries:
+
+Query 1: Robotic space missions
+
+When k=10 and n=8:
+The top 20 results that we get before query expansion are :
+1 Aurora_programme(doc_id = 193) 1 0.4025986 Lucene
+1 Unmanned_robotic_space_probes(doc_id = 36) 2 0.36939734 Lucene
+1 Robotic_spacecraft(doc_id = 649) 3 0.36939734 Lucene
+1 Vision_for_Space_Exploration(doc_id = 737) 4 0.35434946 Lucene
+1 Luna_program(doc_id = 23) 5 0.34322643 Lucene
+1 Deep_space_exploration(doc_id = 324) 6 0.3261649 Lucene
+1 Surveyor_program(doc_id = 250) 7 0.31162742 Lucene
+1 Chinese_Lunar_Exploration_Program(doc_id = 3) 8 0.3103032 Lucene
+1 In-space_propulsion_technologies(doc_id = 956) 9 0.2916942 Lucene
+1 Exploration_Mission_2(doc_id = 391) 10 0.2860565 Lucene
+1 Space_probe(doc_id = 13) 11 0.28445828 Lucene
+1 Space_exploration(doc_id = 44) 12 0.28169736 Lucene
+1 Space_architecture(doc_id = 237) 13 0.27492163 Lucene
+1 Spacecraft(doc_id = 303) 14 0.26619515 Lucene
+1 Sample_return_mission(doc_id = 54) 15 0.26471013 Lucene
+1 Review_of_United_States_Human_Space_Flight_Plans_Committee(doc_id = 619) 16 0.26211524 Lucene
+1 Flexible_path(doc_id = 53) 17 0.25800988 Lucene
+1 Discovery_program(doc_id = 749) 18 0.25331473 Lucene
+1 Lander_(spacecraft)(doc_id = 367) 19 0.24851948 Lucene
+1 Unmanned_spacecraft(doc_id = 941) 20 0.24791098 Lucene
+
+
+Query after expansion : Robotic space missions spacecraft moon exploration propulsion lunar system earth orbit
+
+The top 20 results that we get after query expansion and n=8 are:
+1 Flexible_path(doc_id = 53) 1 0.58681554 Lucene
+1 Luna_program(doc_id = 23) 2 0.5525687 Lucene
+1 Exploration_Mission_2(doc_id = 391) 3 0.54302 Lucene
+1 Chinese_Lunar_Exploration_Program(doc_id = 3) 4 0.5376113 Lucene
+1 Surveyor_program(doc_id = 250) 5 0.5280402 Lucene
+1 Vision_for_Space_Exploration(doc_id = 737) 6 0.50584406 Lucene
+1 Spacecraft(doc_id = 303) 7 0.4997955 Lucene
+1 Unmanned_robotic_space_probes(doc_id = 36) 8 0.49928772 Lucene
+1 Robotic_spacecraft(doc_id = 649) 9 0.49928772 Lucene
+1 Sample_return_mission(doc_id = 54) 10 0.49713352 Lucene
+1 Moon_landing(doc_id = 541) 11 0.48050973 Lucene
+1 In-space_propulsion_technologies(doc_id = 956) 12 0.47215885 Lucene
+1 Aurora_programme(doc_id = 193) 13 0.46807685 Lucene
+1 Moon(doc_id = 800) 14 0.44346616 Lucene
+1 Space_exploration(doc_id = 44) 15 0.44237417 Lucene
+1 Colonization_of_the_Moon(doc_id = 249) 16 0.43198913 Lucene
+1 Space_architecture(doc_id = 237) 17 0.4225681 Lucene
+1 Lander_(spacecraft)(doc_id = 367) 18 0.4190119 Lucene
+1 Ranger_program(doc_id = 382) 19 0.41699594 Lucene
+1 Spaceflight(doc_id = 6) 20 0.4146219 Lucene
+
+
+We can see that there are 16 overlapping documents namely:
+1 Aurora_programme
+2 Flexible_path
+3 Luna_program
+4 Exploration_Mission_2
+5 Chinese_Lunar_Exploration_Program
+6 Surveyor_program
+7 Vision_for_Space_Exploration
+8 Spacecraft
+9 Unmanned_robotic_space_probes
+10 Robotic_spacecraft
+11 Sample_return_mission
+12 In-space_propulsion_technologies
+13 Aurora_programme
+14 Space_exploration
+15 Space_architecture
+16 Lander_(spacecraft)
+
+The 5 documents that are unique after performing expansion are:
+1. Moon_landing
+2. Moon
+3. Colonization_of_the_Moon
+4. Ranger_program
+5. Spaceflight
+
+In total there are 21 differences in the 100 documents that are generated before pseudo relevance feedback and after pseudo relevance feedback and thus there is an overlap of 79 documents before performing pseudo relevance feedback and after performing pseudo relevance feedback using query expansion.
+
+We can see the effectiveness of performing pseudo relevance feedback as we get these 5 documents which are pretty much related to the initial query but were not present in the top 20 ranked documents without expansion but as soon as we performed pseudo relevance feedback by using query expansion we see that it gives us some unique results in the top 20 ranked documents which are relevant to the query, we can also see that we still have 16 documents in common for before performing pseudo relevance feedback and after performing pseudo relevance feedback which tells us that our initial ranking was not completely wrong it was just a little less effective and relevant as compared to after performing pseudo relevance feedback and the ranked documents now are more relevant than before. We can also see the score of the documents.
+
+
+Query 2: Mars exploration
+
+When k=20 and n=8:
+2 List_of_missions_to_Mars(doc_id = 311) 1 0.61522377 Lucene
+2 Exploration_of_Mars(doc_id = 465) 2 0.52066714 Lucene
+2 Mars_Curse(doc_id = 967) 3 0.52066714 Lucene
+2 Mars_probe_program(doc_id = 539) 4 0.5068718 Lucene
+2 Mars_3(doc_id = 947) 5 0.45710105 Lucene
+2 Flyby_(spaceflight)(doc_id = 461) 6 0.40088022 Lucene
+2 Mars(doc_id = 473) 7 0.38116536 Lucene
+2 Lander_(spacecraft)(doc_id = 367) 8 0.3770561 Lucene
+2 Timeline_of_planetary_exploration(doc_id = 79) 9 0.37268138 Lucene
+2 Timeline_of_Solar_System_exploration(doc_id = 739) 10 0.37268138 Lucene
+2 Viking_1(doc_id = 575) 11 0.36464426 Lucene
+2 Rover_(space_exploration)(doc_id = 346) 12 0.36358842 Lucene
+2 Colonization_of_Mars(doc_id = 787) 13 0.36218542 Lucene
+2 Phobos_(moon)(doc_id = 407) 14 0.34290537 Lucene
+2 Unmanned_spacecraft(doc_id = 941) 15 0.33189 Lucene
+2 Review_of_United_States_Human_Space_Flight_Plans_Committee(doc_id = 619) 16 0.3286825 Lucene
+2 Human_outpost(doc_id = 837) 17 0.3203162 Lucene
+2 Phobos_program(doc_id = 631) 18 0.3059619 Lucene
+2 Sample_return_mission(doc_id = 54) 19 0.29963183 Lucene
+2 Aurora_programme(doc_id = 193) 20 0.29887283 Lucene
+
+Query after expansion: Mars exploration orbiter lunar lander mission flyby surface spacecraft martian
+
+The top 20 results that we get after query expansion and n=8 are:
+2 Timeline_of_planetary_exploration(doc_id = 79) 1 0.90457326 Lucene
+2 Timeline_of_Solar_System_exploration(doc_id = 739) 2 0.90457326 Lucene
+2 Unmanned_spacecraft(doc_id = 941) 3 0.82677346 Lucene
+2 List_of_missions_to_Mars(doc_id = 311) 4 0.73262894 Lucene
+2 Lander_(spacecraft)(doc_id = 367) 5 0.7264208 Lucene
+2 Exploration_of_Mars(doc_id = 465) 6 0.68853617 Lucene
+2 Mars_Curse(doc_id = 967) 7 0.68853617 Lucene
+2 Mars_3(doc_id = 947) 8 0.6158967 Lucene
+2 Mars_probe_program(doc_id = 539) 9 0.60090697 Lucene
+2 Flyby_(spaceflight)(doc_id = 461) 10 0.5860089 Lucene
+2 Discovery_program(doc_id = 749) 11 0.58341515 Lucene
+2 Viking_1(doc_id = 575) 12 0.5701283 Lucene
+2 Spacecraft(doc_id = 303) 13 0.5351739 Lucene
+2 Phobos_(moon)(doc_id = 407) 14 0.5172508 Lucene
+2 Rover_(space_exploration)(doc_id = 346) 15 0.43816632 Lucene
+2 Viking_program(doc_id = 329) 16 0.41046494 Lucene
+2 Astrobotic_Technology(doc_id = 972) 17 0.39413238 Lucene
+2 Space_probe(doc_id = 13) 18 0.38991243 Lucene
+2 Mariner_program(doc_id = 510) 19 0.38308105 Lucene
+2 Mars(doc_id = 473) 20 0.3755239 Lucene
+
+We can see that there are 14 overlapping documents namely:
+1. Timeline_of_planetary_exploration
+2. Timeline_of_Solar_System_exploration
+3. Unmanned_spacecraft
+4. List_of_missions_to_Mars
+5. Lander_(spacecraft)
+6. Exploration_of_Mars
+7. Mars_Curse
+8. Mars_3
+9. Mars_probe_program
+10.Flyby_(spaceflight)
+11.Viking_1
+12.Phobos_(moon)
+13.Rover_(space_exploration)
+14.Mars
+
+The document that is unique after performing expansion is:
+1. Discovery_program
+2. Spacecraft
+3. Viking_program
+4. Astrobotic_Technology
+5. Space_probe
+6. Mariner_program
+
+
+In total there are 19 differences in the 100 documents that are generated before pseudo relevance feedback and after pseudo relevance feedback and thus there is an overlap of 81 documents before performing pseudo relevance feedback and after performing pseudo relevance feedback using query expansion.
+
+We can see that for the 2nd query there are 6 documents that are new and were not present before performing psuedo relevance feedback in the top 20 ranked documents but are present after performing pseudo relevance feedback and are related to the initial query, we can say that the pseudo relevance feedback is effective because it gets the relevant documents at the top in rank which had a low rank before without performing expansion. We can also see the score of the documents. We can also see that there are 14 overlapping documents in the ranked documents before performing pseudo relevance feedback and after performing pseudo relevance feedback.
